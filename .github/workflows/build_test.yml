@@ -4,14 +4,14 @@ on:
   pull_request:
     branches:
       - '*'
-    workflow_dispatch:
-    
+  workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - name: install-build-essential
-      run: sudo apt-get update && sudo apt-get install build-essential libbsd-dev -y
+      run: sudo apt-get install build-essential
 
     - name: checkout
       uses: actions/checkout@v3
